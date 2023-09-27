@@ -1,24 +1,26 @@
-# positive indexing
-a = [1, 2, 3, 4, 5, 6, 7]
-print(a[4])
-b = [8, 9, 10]
-a.extend(b)
-print(a)
-a[2] = 0
-print(a)
-print(a[0:6])
-print(a[2:5])
-a[2] = 2
-a[4] = 6
-print(a[2:5])
+student = {"Name": "Ann", "Place": "Kerala", "Age": 22, "RollNo.": 17}
+print(student)
 
-# negative indexing
-c = [1, 2, 3, 4, 5, 6, 7]
-print(c[-3])
-print(c[-5:-2])
-print(c[-7:-3])
-print(c[-5:-3])
-c.extend(c)
-print(c)
-c.sort()
-print(c)
+x = student["Age"]
+print(x)
+
+for x in student.keys():
+    print(x)
+
+for x in student.values():
+    print(x)
+
+student["Class"] = 12
+print(student)
+
+for x, y in student.items():
+    print(x, y)
+
+student["RollNO."] = 37
+print(student)
+
+student.pop("Class")
+print(student)
+
+student.copy()
+print(student)

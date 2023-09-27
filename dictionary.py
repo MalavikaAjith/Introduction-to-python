@@ -1,111 +1,42 @@
+# copy dictionary - copy()
 a = {
   "brand": "Ford",
   "model": "Mustang",
   "year": 1964
 }
-print(a)
+b = a.copy()
+print(b)
 
+# OR dict()
 a = {
   "brand": "Ford",
   "model": "Mustang",
   "year": 1964
 }
-print(a["brand"])
+b = dict(a)
+print(b)
 
-# Allow duplicates
-a = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964,
-  "year" : 2020
+# 3 dictionaries
+family = {"child1": {"name": "Emil", "year": 2004}, "child2": {"name": "Tobias", "year": 2007}, "child3": {"name": "Ann", "year": 2011}}
+print(family)
+
+# OR
+child1 = {
+  "name": "Emil",
+  "year": 2004
 }
-print(a)
-
-# get() method
-a = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
+child2 = {
+  "name": "Tobias",
+  "year": 2007
 }
-x = a["model"]
-print(x)
-
-# get keys
-x = a.keys()
-print(x)
-
-a = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
+child3 = {
+  "name": "Linus",
+  "year": 2011
 }
-a["colour"] = "white"
-print(a)
 
-a = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
+family = {
+  "child1": child1,
+  "child2": child2,
+  "child3": child3
 }
-x = a.values()
-print(x)
-
-a = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-x = a.items()
-print(x)
-
-a = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-a["year"] = 2020
-print(a)
-
-a = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-a.update({"year": 2018})
-print(a)
-
-# remove
-a = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-a.pop("model")
-print(a)
-
-a = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-a.popitem()
-print(a)
-
-a = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-del a["model"]
-print(a)
-
-a = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-a.clear()
-print(a)
-
-
-
+print(family["child2"]["name"])
