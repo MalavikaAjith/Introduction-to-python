@@ -1,90 +1,66 @@
-i = 0
-while i <= 20:
-    print(i)
-    i += 2
+def func(name, std, rollno):
+    print(name + " " + std + " " + rollno)
+func("Ann", "10", "34")
 
 print(" ")
 
-a = 1
-while a <= 20:
-    print(a)
-    a += 2
+# add
+def a(x,y):
+    return x + y
+print(a(4,5))
 
-print(" ")
+print(' ')
 
-i = 4
-while i % 2 == 0:
-    print("i is an even number")
-    break
-else:
-    print("i is an odd number")
+# subtract
+def a(x,y):
+    return x - y
+print(a(6,3))
 
-print(" ")
+print(' ')
 
-i = 1
-while i <= 5:
-    j = 1
-    while j <= i:
-        print("*", end=" ")
-        j += 1
-    print()
-    i += 1
+# multiply
+def a(x, y):
+    return x * y
+print(a(4,5))
 
-print(" ")
+print(' ')
 
-i = 1
-while i <= 5:
-    k = 1
-    while k <= 5 - i:
-        print('', end=" ")
-        k += 1
-    j = 1
-    while j <= i:
-        print("*", end=" ")
-        j += 1
-    print()
-    i += 1
+# divide
+def a(x, y):
+    return x/y
+print(a(8,2))
 
-print(" ")
+print('')
 
-i = 5
-while i >= 1:
-    j = 1
-    while j <= i:
-        print("*", end=" ")
-        j += 1
-    print()
-    i -= 1
+# square
+def a(x,y):
+    return x**y
+print(a(3,2))
+print(a(3,3))
 
-print(" ")
+print(' ')
 
-i = 5
-while i >= 1:
-    j = 1
-    while j <= i:
-        print(j, end=" ")
-        j += 1
-    print()
-    i -= 1
+# multiplication table
+def a(x):
+    return x * 2
+print(a(1))
+print(a(2))
+print(a(3))
+print(a(4))
+print(a(5))
+print(a(6))
+print(a(7))
+print(a(8))
+print(a(9))
+print(a(10))
 
-print(" ")
+print(' ')
 
-i = 1
-while i <= 5:
-    j = 1
-    while j <= i:
-        print(i, end=" ")
-        j += 1
-    print()
-    i += 1
+# for loop - multiplication
+num = 2
+for i in range(1, 11):
+    print(num, 'x', i, '=', num*i)
 
-print(" ")
 
-i = 1
-while i <= 5:
-    j = 1
-    while j <= i:
-        print(j, end=" ")
-        j += 1
-    print()
-    i += 1
+
+
