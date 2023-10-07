@@ -1,66 +1,45 @@
-def func(name, std, rollno):
-    print(name + " " + std + " " + rollno)
-func("Ann", "10", "34")
-
-print(" ")
-
-# add
-def a(x,y):
-    return x + y
-print(a(4,5))
+x = [8, 9, 10]
+x[1] = 17
+print(x)
 
 print(' ')
 
-# subtract
-def a(x,y):
-    return x - y
-print(a(6,3))
+y = [4, 5, 6]
+x.extend(y)
+print(x)
 
 print(' ')
 
-# multiply
-def a(x, y):
-    return x * y
-print(a(4,5))
+x.pop(0)
+print(x)
 
 print(' ')
 
-# divide
-def a(x, y):
-    return x/y
-print(a(8,2))
-
-print('')
-
-# square
-def a(x,y):
-    return x**y
-print(a(3,2))
-print(a(3,3))
+x.sort()
+print(x)
 
 print(' ')
 
-# multiplication table
-def a(x):
-    return x * 2
-print(a(1))
-print(a(2))
-print(a(3))
-print(a(4))
-print(a(5))
-print(a(6))
-print(a(7))
-print(a(8))
-print(a(9))
-print(a(10))
+x *= 2
+print(x)
 
 print(' ')
 
-# for loop - multiplication
-num = 2
-for i in range(1, 11):
-    print(num, 'x', i, '=', num*i)
+x.insert(3, 25)
+print(x)
 
+print(' ')
 
+x = int(input("Enter the number:"))
+if x >= 0:
+    print("Is a positive number")
+else:
+    print("Is a negative number")
 
+print(' ')
 
+rows = 6
+for x in range(1, rows):
+    for y in range(x):
+        print("1", end=" ")
+    print(' ')
