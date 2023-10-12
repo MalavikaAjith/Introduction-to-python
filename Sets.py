@@ -1,62 +1,58 @@
 import re
 a = "My name is Malavika"
-x = re.findall("\AMy", a)
-print(x)
-if x:
-    print("Yes")
-else:
-    print("No")
-x = re.findall("r\bain", a)
+x = re.findall("[arn]", a)
 print(x)
 if x:
     print("yes")
 else:
     print("no")
-x = re.findall("r\Bain", a)
+x = re.findall("[a-n]", a)
 print(x)
 if x:
     print("yes")
 else:
     print("no")
-x = re.findall("\d", a)
+x = re.findall("[^arn]", a)
 print(x)
 if x:
     print("yes")
 else:
     print("no")
-x = re.findall("\D", a)
+x = re.findall("[0123]", a)
 print(x)
 if x:
     print("yes")
 else:
     print("no")
-x = re.findall("\s", a)
+x = re.findall("[0-9]", a)
 print(x)
 if x:
     print("yes")
 else:
     print("no")
-x = re.findall("\S", a)
+x = re.findall("[0-5][0-9]", a)
 print(x)
 if x:
     print("yes")
 else:
     print("no")
-x = re.findall("\w", a)
+x = re.findall("[a-zA-Z]", a)
 print(x)
 if x:
     print("yes")
 else:
     print("no")
-x = re.findall("\W", a)
+x = re.split("\s", a)
 print(x)
-if x:
-    print("yes")
-else:
-    print("no")
-x = re.findall("Malavika\Z", a)
+x = re.split("\s", a, 1)
 print(x)
-if x:
-    print("yes")
-else:
-    print("no")
+x = re.sub("\s", "v", a)
+print(x)
+x = re.sub("\s", "v", a, 1)
+print(x)
+x = re.search(r"\bMa\w+", a)
+print(x.span())
+x = re.search(r"\bM\w+", a)
+print(x.string)
+x = re.search(r"\bM\w+", a)
+print(x.group())
