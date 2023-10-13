@@ -1,27 +1,55 @@
 class Person:
-    def __init__(self, name, age, std, branch):
-        self.name = name
+    def __init__(self, fname, lname, age):
+        self.firstname = fname
+        self.lastname = lname
         self.age = age
-        self.std = std
-        self.branch = branch
-p1 = Person("Ann",22 , 12, "science")
-print(p1.name)
-print(p1.age)
-print(p1.std)
-print(p1.branch)
+    def func(self):
+        print(self.firstname, self.lastname, self.age)
+class Student(Person):
+    def __init__(self, fname, lname, age):
+        super().__init__(fname, lname, age)
+    def myfunc(self):
+        print("My name is", self.firstname , self.lastname, ", I am ", self.age, "years old.")
+p1 = Student("Malavika", "Ajith", "22")
+p1.myfunc()
 
-print(' ')
+print(" ")
 
-class Person:
-    def __init__(self, name, age, std, branch):
-        self.name = name
-        self.age = age
-        self.std = std
-        self.branch = branch
-    def __str__(self):
-        return f"{self.name}, {self.age}, {self.std}, {self.branch}"
-p1 = Person("Ann", 22, 12, "science")
-print(p1)
+class Car:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+    def move(self):
+        print("Drive!")
+class Boat:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+    def move(self):
+        print("Sail!")
+class Plane:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+    def move(self):
+        print("Fly!")
+car1 = Car("Ford", "Mustang")
+boat1 = Boat("Ibiza", "Touring 20")
+plane1 = Plane("Boeing", "747")
+for x in (car1, boat1, plane1):
+    x.move()
 
-print(' ')
+print(" ")
 
+firstname = "Malavika"
+lastname = "Ajith"
+age = 22
+details = "My name is {0} {1} and I am {2} years old"
+print(details.format(firstname, lastname, age))
+
+print(" ")
+
+item = "orange"
+price = 56
+myorder = "Brought {0} for {1:.2f} rupees"
+print(myorder.format(item, price))
